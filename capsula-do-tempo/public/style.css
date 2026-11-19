@@ -1,0 +1,110 @@
+:root {
+    --fundo: #323d69;
+    --cartao: #7a75c5;
+    --texto: #eef0ff;
+    --destaque: #3300ff;
+    --ouro: #ffc857;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--fundo);
+    color: var(--texto)
+}
+
+.topo {
+    text-align: center;
+    padding: 40px 16px 20px;
+}
+
+.topo h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.conteudo {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+.cartao, .capsula {
+    background-color: var(--cartao);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 12px 0px 4px;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--destaque);
+}
+
+button {
+    margin-top: 16px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--destaque);
+    color: #fcfcfc;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.capsula.trancada {
+    border-left: 6px solid var(--ouro);
+}
+
+.capsula.aberta {
+    border-left: 6px solid #4ade80;
+}
+
+.capsula h3 {
+    margin: 0 0 8px;
+}
+
+.capsula small {
+    opacity: 0.7;
+}
+
+.contagem {
+    color: var(--ouro);
+    font-weight: bold
+}
+
+.aviso {
+    min-height: 1.2em;
+}
+
+
+input[type="datetime-local"]:not(:focus):invalid::-webkit-datetime-edit-day-field,
+input[type="datetime-local"]:not(:focus):invalid::-webkit-datetime-edit-month-field,
+input[type="datetime-local"]:not(:focus):invalid::-webkit-datetime-edit-year-field,
+input[type="datetime-local"]:not(:focus):invalid::-webkit-datetime-edit-hour-field,
+input[type="datetime-local"]:not(:focus):invalid::-webkit-datetime-edit-minute-field,
+input[type="datetime-local"]:not(:focus):invalid::-webkit-datetime-edit-text {
+  color: transparent;
+}
